@@ -1,0 +1,24 @@
+CREATE TABLE city (
+city_id varchar(20) NOT NULL PRIMARY KEY,
+state char(2),
+population_2017 varchar(10),
+populatoin_2022 varchar(10)
+);
+
+CREATE TABLE farms (
+farm_id varchar(20) NOT NULL PRIMARY KEY,
+address varchar(25),
+ownership_status varchar(4) CHECK (ownership_status IN ('owner', 'o/o', 'operator')),
+acres varchar(10),
+year char CHECK (year IN ('2017', '2022')),
+city_id varchar(20),
+FOREIGN KEY (city_id) REFERENCES city(city_id)
+);
+
+CREATE TABLE Producers (
+Producer_ID varchar(15),
+first_name varchar(20),
+last_name varchar(20),
+farm_id varchar(20),
+FOREIGN KEY (farm_id) REFERENCES farms(farm_id)
+);
