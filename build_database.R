@@ -1,4 +1,4 @@
-# Load necessary libraries
+# Load libraries
 library(DBI)
 library(RSQLite)
 
@@ -34,12 +34,11 @@ CREATE TABLE IF NOT EXISTS Producers (
   FOREIGN KEY (farm_id) REFERENCES farms(farm_id)
 );")
 
-# Optional: Verify that tables were created (not required but useful for debugging)
+# Optional: Verify tables were created.
 tables <- dbListTables(con)
 print(tables);
 
-tables <- dbListTables(con)
-print(tables);
+
 
 
 
