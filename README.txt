@@ -1,5 +1,5 @@
 This is a repository created by Lauren O'Laughlin for WLF553's final project.
 
-The project's data set is still undetermined. Either Zillow, DMV, or DTN data but still in conversation about that. The objective of the project will be to sort data in support of my thesis, with the focus on community development and agriculture. 
+The original data source proved to be inaccurate. Shifted to a new data source (USDA Census of Agriculture) with different available variables and connections. Edits to original Tidy Data Verse (see V02) and table design updated.
 
-This README was last edited 9/17/2024.
+This README was last edited 11/25/2024.

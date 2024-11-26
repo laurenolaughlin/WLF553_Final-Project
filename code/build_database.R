@@ -1,47 +1,61 @@
-# Load libraries
+#load libraries ####
 library(DBI)
 library(RSQLite)
 
-# Connect to the existing database
+#connect to the existing database ####
 con <- dbConnect(RSQLite::SQLite(), dbname = "Final-Project.db");
 
-# SQL code to create tables
-dbExecute(con, "
-CREATE TABLE IF NOT EXISTS city (
-  city_id varchar(20) NOT NULL PRIMARY KEY,
-  state char(2),
-  population_2017 varchar(10),
-  population_2022 varchar(10)
-);")
+# run SQL code to create tables ####
 
 dbExecute(con, "
-CREATE TABLE IF NOT EXISTS farms (
-  farm_id varchar(20) NOT NULL PRIMARY KEY,
-  address varchar(25),
-  ownership_status varchar(4) CHECK (ownership_status IN ('owner', 'o/o', 'operator')),
-  acres varchar(10),
-  year char CHECK (year IN ('2017', '2022')),
-  city_id varchar(20),
-  FOREIGN KEY (city_id) REFERENCES city(city_id)
-);")
+CREATE TABLE IF NOT EXISTS county (
+county_id varchar(20) NOT NULL PRIMARY KEY,
+county varchar(15),
+state char(2)
+);
+")
+
+dbExecute (con, "
+CREATE TABLE population (
+population_id varchar(20) NOT NULL PRIMARY KEY,
+county_id varchar(20),
+population_size varchar(20),
+year varchar(4),
+FOREIGN KEY (county_id) REFERENCES county(county_id)
+);
+")
+ 
+dbExecute(con, "
+CREATE TABLE ownership (
+ownership_id varchar(20) NOT NULL PRIMARY KEY,
+owners varchar(10),
+partial_owners varchar(10),
+tenants varchar(10),
+year varchar(4),
+county_id varchar(20),
+FOREIGN KEY (county_id) REFERENCES county(county_id)
+);
+")
 
 dbExecute(con, "
-CREATE TABLE IF NOT EXISTS Producers (
-  Producer_ID varchar(15),
-  first_name varchar(20),
-  last_name varchar(20),
-  farm_id varchar(20),
-  FOREIGN KEY (farm_id) REFERENCES farms(farm_id)
-);")
-
-# Optional: Verify tables were created.
+CREATE TABLE farm_size (
+  farmsize_id varchar(10) NOT NULL PRIMARY KEY,
+  county_id varchar(20),
+  under_100_acres varchar(5),
+  acres_101_to_500 varchar(5),
+  acres_500_to_1000 varchar(5),
+  over_1000_acres varchar(5),
+  year varchar(4),
+  FOREIGN KEY (county_id) REFERENCES county(county_id)
+);
+")
+          
+# Optional: Verify tables were created. ####
 tables <- dbListTables(con)
 print(tables);
 
+#Confirm that data was loaded properly ####
 
-
-
-
-
-
-
+library(DBI)
+con <- dbConnect(RSQLite::SQLite(), dbname = "Final-Project.db");
+dbGetQuery(con, "SELECT * FROM population;")

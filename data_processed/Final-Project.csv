@@ -1,0 +1,7 @@
+﻿county_id,county,state,year,population_id,population_size,farmsize_id,under_100_acres,acres_101_to_500,acres_500_to_1000,over_1000_acres,ownership_id,owners,partial_owners,tenants
+ada_02,ada,ID,2002,pop_ada_02,"319,687",size_ada_02,1212,138,31,39,own_ada_02,1105,238,77
+ada_22,ada,ID,2022,pop_ada_22,518907,size_ada_22,65,32,2,9,own_ada_22,996,88,58
+gallatin_02,gallatin,MT,2002,pop_gallatin_02,71824,size_gallatin_02,536,289,103,146,own_gallatin_02,741,237,96
+gallatin_22,gallatin,MT,2022,pop_gallatin_22,124857,size_gallatin_22,582,216,77,134,own_gallatin_22,753,166,90
+teton_02,teton,WY,2002,pop_teton_02,18837,size_teton_02,43,41,9,17,own_teton_02,72,24,14
+teton_22,teton,WY,2022,pop_teton_22,23297,size_teton_22,54,43,2,14,own_teton_22,80,21,10
