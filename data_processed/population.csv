@@ -1,7 +1,7 @@
 ﻿population_id,county_id,population_size,year
-pop_ada_02,ada_02,"319,687",2002
-pop_ada_22,ada_22,518907,2022
-pop_gallatin_02,gallatin_02,71824,2002
-pop_gallatin_22,gallatin_22,124857,2022
-pop_teton_02,teton_02,18837,2002
-pop_teton_22,teton_22,23297,2022
+pop_ada_02,ada ,"319,687",2002
+pop_ada_22,ada ,518907,2022
+pop_gallatin_02,gallatin ,71206,2002
+pop_gallatin_22,gallatin ,124857,2022
+pop_teton_02,teton ,18553,2002
+pop_teton_22,teton ,23346,2022

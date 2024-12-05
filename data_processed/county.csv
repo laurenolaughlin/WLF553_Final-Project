@@ -1,7 +1,4 @@
-﻿county_id,county,state,,,
-ada_02,ada,ID,,,
-ada_22,ada,ID,,,
-gallatin_02,gallatin,MT,,,
-gallatin_22,gallatin,MT,,,
-teton_02,teton,WY,,,
-teton_22,teton,WY,,,
+﻿county_id,state
+ada,ID
+gallatin ,MT
+teton  ,WY

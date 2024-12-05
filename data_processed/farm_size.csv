@@ -1,7 +1,7 @@
 ﻿farmsize_id,county_id,under_100_acres,acres_101_to_500,acres_500_to_1000,over_1000_acres,year
-size_ada_02,ada_02,1212,138,31,39,2002
-size_ada_22,ada_22,65,32,2,9,2022
-size_gallatin_02,gallatin_02,536,289,103,146,2002
-size_gallatin_22,gallatin_22,582,216,77,134,2022
-size_teton_02,teton_02,43,41,9,17,2002
-size_teton_22,teton_22,54,43,2,14,2022
+size_ada_02,ada ,1212,138,31,39,2002
+size_ada_22,ada ,65,32,2,9,2022
+size_gallatin_02,gallatin  ,536,289,103,146,2002
+size_gallatin_22,gallatin  ,582,216,77,134,2022
+size_teton_02,teton  ,43,41,9,17,2002
+size_teton_22,teton  ,54,43,2,14,2022
